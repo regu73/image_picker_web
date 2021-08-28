@@ -37,7 +37,7 @@ class ImagePickerWeb {
   static Future<html.File?> _pickFile(String type) async {
     final completer = Completer<List<html.File>?>();
     final input = html.FileUploadInputElement() as html.InputElement;
-    input.accept = '$type/*';
+    input.accept = '*/*';
 
     var changeEventTriggered = false;
     void changeEventListener(html.Event e) {
@@ -91,7 +91,7 @@ class ImagePickerWeb {
     final completer = Completer<List<html.File>?>();
     final input = html.FileUploadInputElement();
     input.multiple = true;
-    input.accept = '$type/*';
+    input.accept = '*/*';
 
     var changeEventTriggered = false;
     void changeEventListener(html.Event e) {
